@@ -28,3 +28,4 @@
 {"level":"info","message":"Register User: New user registered successfully","timestamp":"2024-07-31 13:13:44"}
 {"level":"info","message":"Login User: User logged in successfully","timestamp":"2024-07-31 13:13:58"}
 {"level":"info","message":"Create Comment: Comment created successfully","timestamp":"2024-07-31 13:14:30"}
+{"level":"warn","message":"Auth Middleware: User not found for token payload id 2","timestamp":"2024-07-31 14:32:57"}

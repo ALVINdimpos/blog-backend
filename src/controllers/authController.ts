@@ -22,7 +22,6 @@ export const register = [
   body("password")
     .isLength({ min: 8 })
     .withMessage("Password must be at least 8 characters long"),
-  body("roleId").isInt().withMessage("Valid role ID is required"),
 
   async (req: Request, res: Response): Promise<Response> => {
     const errors = validationResult(req);
@@ -33,7 +32,7 @@ export const register = [
       return res.status(400).json({ errors: errors.array() });
     }
     try {
-      const { username, email, password, roleId } = req.body;
+      const { username, email, password } = req.body;
 
       if (!validateEmail(email)) {
         return res.status(400).json({ message: "Invalid email format" });
@@ -50,7 +49,7 @@ export const register = [
         logger.error("Register User: User already exists with email " + email);
         return res.status(400).json({ message: "User already exists" });
       }
-
+      const roleId = 1;
       const role = await Role.findByPk(roleId);
       if (!role) {
         return res.status(400).json({ message: "Invalid role" });
