@@ -71,7 +71,13 @@ export const getCommentsByPost = [
 
       const comments = await Comment.findAll({
         where: { postId },
-        include: [User],
+        include: [
+          {
+            model: User,
+            as: "user",
+            attributes: ["id", "username", "email"],
+          },
+        ],
       });
       return res.status(200).json(comments);
     } catch (error) {

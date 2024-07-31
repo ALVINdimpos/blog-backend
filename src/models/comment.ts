@@ -52,9 +52,9 @@ export default (sequelize: Sequelize) => {
     },
     {
       sequelize,
-        modelName: "Comment",
-      tableName: "Comments",  
-    }
+      modelName: "Comment",
+      tableName: "Comments",
+    },
   );
 
   return Comment;
