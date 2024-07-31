@@ -19,7 +19,6 @@
     "seed": "npx sequelize-cli db:seed:all",
     "rollback:seed": "npx sequelize-cli db:seed:undo",
     "rollback:seed:all": "npx sequelize-cli db:seed:undo:all",
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\"",
     "format:write": "prettier \"**/*.{js,ts}\" --write",
     "format:check": "prettier \"**/*.{js,ts}\" --check"
   },
