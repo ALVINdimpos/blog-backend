@@ -49,7 +49,7 @@ export const register = [
         logger.error("Register User: User already exists with email " + email);
         return res.status(400).json({ message: "User already exists" });
       }
-      const roleId = 1;
+      const roleId = 2;
       const role = await Role.findByPk(roleId);
       if (!role) {
         return res.status(400).json({ message: "Invalid role" });
