@@ -26,20 +26,19 @@ This is the backend for a simple blog application. It provides API endpoints for
 3. Set up environment variables:
    Create a `.env` file in the root directory with the following content:
    ```
-DB_USER=blog_db_h2pk_user
-DB_PASS=WYm9jSr3OK1ZIMfBWDEVdPbgHobwzfCv
-DB_NAME=blog_db_h2pk
-DB_HOST=dpg-cql26ll6l47c73f1uh2g-a.oregon-postgres.render.com
-
-JWT_SECRET=secret
-SALT_ROUNDS=10
-JWT_EXPIRES_IN=1d
-EMAIL_USER=fistonalvin@gmail.com
-EMAIL_PASS=securepassword123
-PORT=3000
-NODE_ENV=development
+   DB_USER=blog_db_h2pk_user
+   DB_PASS=WYm9jSr3OK1ZIMfBWDEVdPbgHobwzfCv
+   DB_NAME=blog_db_h2pk
+   DB_HOST=dpg-cql26ll6l47c73f1uh2g-a.oregon-postgres.render.com
+   JWT_SECRET=secret
+   SALT_ROUNDS=10
+   JWT_EXPIRES_IN=1d
+   EMAIL_USER=fistonalvin@gmail.com
+   EMAIL_PASS=securepassword123
+   PORT=3000
+   NODE_ENV=development
    ```
-   Replace the database URL and JWT secret with your own values.
+   Replace these values with your own secure credentials.
 
 4. Set up the database:
    - Create a PostgreSQL database named `blog_db`
@@ -134,7 +133,6 @@ To run the server in development mode with hot reloading:
 ```
 npm run dev
 ```
-
 
 ## Deployment
 
